@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ExchangeObjectService extends JpaRepository<ExchangeObject, Integer> {
 
+
+  public ExchangeObject findByFromAndTo(String from, String to);
 }
