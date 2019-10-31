@@ -34,7 +34,7 @@ public class CurrencyConversionController {
         exchangeObj.getId(),
         exchangeObj.getFrom(),
         exchangeObj.getTo(),
-        exchangeObj.getConversionFactor(), BigDecimal.valueOf(value));
+        exchangeObj.getConversionFactor(), BigDecimal.valueOf(value), 0);
   }
 
   @GetMapping("/convert/from/{from}/to/{to}/value/{value}")
@@ -46,7 +46,9 @@ public class CurrencyConversionController {
         exchangeObj.getId(),
         exchangeObj.getFrom(),
         exchangeObj.getTo(),
-        exchangeObj.getConversionFactor(), BigDecimal.valueOf(value));
+        exchangeObj.getConversionFactor(),
+        BigDecimal.valueOf(value),
+        exchangeObj.getPort());
   }
 
 }

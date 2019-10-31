@@ -11,18 +11,23 @@ public class CurrencyConvertionOutput {
   private BigDecimal conversionFactor;
   private BigDecimal value;
   private BigDecimal convertedValue;
+  private int port;
 
+  public int getPort() {
+    return port;
+  }
 
   public CurrencyConvertionOutput() {
   }
 
   public CurrencyConvertionOutput(int id, String from, String to,
-      BigDecimal conversionFactor, BigDecimal value) {
+      BigDecimal conversionFactor, BigDecimal value, int port) {
     this.id = id;
     this.from = from;
     this.to = to;
     this.conversionFactor = conversionFactor;
     this.value = value;
+    this.port = port;
   }
 
   public int getId() {
